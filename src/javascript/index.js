@@ -18,34 +18,41 @@ function getAllInfos(data) {
     // Debug
     console.log(data);
     for (let i = 0; i < data.length; i++) {
-        let element = data[i]; // Ititialize the element in the variable
-        const name = element.name; // Catch element name
-        const createdAt = element.created_at; // Catch date od element was created
-        const description = element.description; // Catch the element description
+        /** @var {object} element - Ititialize the element in the variable */
+        let element = data[i];
+        /** @const {string} name - Name of Event*/
+        const name = element.name;        
+        /** @const {string} createdAt - Date to Event created */
+        const createdAt = element.created_at;
+        /** @const {string} description - Event description */
+        const description = element.description;
+        /** @const {string} id - Event ID */
         const id = element.id;
-        console.log(`${name}\n ${createdAt}\n ${description}\n ${id}`); // Debug
-        createEventCard(name, createdAt, description, id); // Call the createdEventCard function
+        /** @description - Debug */
+        console.log(`${name}\n ${createdAt}\n ${description}\n ${id}`);
+        /** @description - Call the createdEventCard function */
+        createEventCard(name, createdAt, description, id);
     }
 }
 
-/**
- * 
- * @param - @var {JSON[Object]} allInfo
- */
+/** @param - @var {JSON[Object]} allInfo */
 getAllInfos(allInfo);
 
 /**
  * 
  * @param {string} name - Name of Event
- * @param {string} date - Date to Event created 
+ * @param {string} date - Date to Event created
  * @param {string} desc - Event description
  * @param {string} id - Event ID
  */
 function createEventCard(name, date, desc, id) {
-    const div = document.getElementById("container"); // Target the div container
-    const newSection = document.createElement("section"); // Create new <section>
-    newSection.id = "event"; // Add an id "event"
-    // Add event contains in the <section>
+    /** @const {HTMLElement} div - Target the div container */
+    const div = document.getElementById("container");
+    /** @const {HTMLElement} div - Create new <section> */
+    const newSection = document.createElement("section");
+    /** @description - Add an id "event" */
+    newSection.id = "event";
+    /** @description - Add event contains in the <section> */
     newSection.innerHTML = `
         <a href="./src/HTML/event.html" id="${id}" class="id">
           <h3>${name}</h3>
@@ -53,5 +60,6 @@ function createEventCard(name, date, desc, id) {
           <p>created date : ${date}</p>
         </a>
     `
-    div.appendChild(newSection); // Add <section> in <div> container
+    /** @description - Add <section> in <div> container */
+    div.appendChild(newSection);
 }
