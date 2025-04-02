@@ -1,5 +1,13 @@
+import { createHeader } from "./module-json.js/header.js";
+import { getInputValue } from "./module-json.js/get-input-value.js";
+
+// button to add a input date
 const addDate = document.getElementById("add-date");
+
+// form for an event
 const form = document.getElementById("my-form");
+
+createHeader();
 
 /**
  * Add an input date to add another date to the event
@@ -8,36 +16,26 @@ addDate.addEventListener("click", (e) => {
   addDate.insertAdjacentHTML(
     "beforebegin",
     `<label for="date-event">Enter the date : </label>
-        <input type="date" id="date-event" required />`
+        <input type="date" class="date" required />`
   );
 });
 
 const formBtn = document.getElementById("submit");
-formBtn.addEventListener("click", getInputValue);
 
-export function getInputValue() {
-  let inputObj = {};
-  const name = document.getElementById("name-event");
-  const author = document.getElementById("author-event");
-  const id = document.getElementById("id-event");
-  const desc = document.getElementById("desc-event");
-  const date = document.getElementById("date-event");
-
-  inputObj.name = name.value;
-  inputObj.author = author.value;
-  inputObj.id = id.value;
-  inputObj.desc = desc.value;
-  inputObj.date = date.value;
-  console.log(inputObj);
+formBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log(getInputValue());
+  console.log("📤 Données envoyées :", JSON.stringify(getInputValue(), null, 2));
 
   fetch("http://localhost:3000/api/events/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(inputObj),
+    body: JSON.stringify(getInputValue()),
   })
     .then((response) => {
+      console.log(response);
       return response.json();
     })
     .then((data) => {
@@ -46,4 +44,4 @@ export function getInputValue() {
     .catch((error) => {
       console.error("Erreur:", error);
     });
-}
+});
