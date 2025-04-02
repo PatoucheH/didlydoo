@@ -25,8 +25,6 @@ const formBtn = document.getElementById("submit");
 
 formBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(getInputValue());
-  console.log("📤 Données envoyées :", JSON.stringify(getInputValue(), null, 2));
 
   fetch("http://localhost:3000/api/events/", {
     method: "POST",
@@ -36,7 +34,6 @@ formBtn.addEventListener("click", (e) => {
     body: JSON.stringify(getInputValue()),
   })
     .then((response) => {
-      console.log(response);
       return response.json();
     })
     .then((data) => {
