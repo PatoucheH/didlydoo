@@ -1,14 +1,5 @@
-export function getInfo() {
-    return fetch("http://localhost:3000/api/events/")
-        .then(function(response) {
-            return response.json();
-        })
+export async function getInfo() {
+    const rep = await fetch("http://localhost:3000/api/events/")
+    const info = await rep.json()
 
-        .then(function(data) {
-            return data;
-        })
-
-        .catch(function(error) {
-            console.log(error);
-        })
 };

@@ -1,0 +1,44 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 50px 25px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+input {
+  margin: 15px;
+  padding: 3px;
+  text-align: center;
+  border: none;
+  box-shadow: 5px 5px 10px #333;
+  transition: transform 0.5s;
+}
+
+input:focus {
+  outline: none;
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px #000;
+}
+
+#submit {
+  margin: 15px;
+  padding: 15px 25px;
+  border-radius: 999px;
+  border: none;
+  background: #666;
+}
+
+#add-date {
+  width: 25px;
+  cursor: pointer;
+}
