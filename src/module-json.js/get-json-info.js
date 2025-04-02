@@ -1,14 +1,9 @@
-export function getInfo() {
-    return fetch("http://localhost:3000/api/events/")
-        .then(function(response) {
-            return response.json();
-        })
-
-        .then(function(data) {
-            return data;
-        })
-
-        .catch(function(error) {
-            console.log(error);
-        })
-};
+export async function getInfo(route) {
+    try {
+        const response = await fetch(`http://localhost:3000${route}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(error);
+    }
+}

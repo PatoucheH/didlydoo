@@ -1,5 +1,9 @@
 import { createHeader } from "./module-json.js/header.js";
-
-const formBtn = document.getElementById
+import { getInfo } from "./module-json.js/get-json-info.js";
 
 createHeader();
+
+let rep = await getInfo("/api/events/38b643aeb883");
+
+
+
