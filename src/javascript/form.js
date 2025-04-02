@@ -12,6 +12,9 @@ addDate.addEventListener("click", (e) => {
   );
 });
 
+const formBtn = document.getElementById("submit");
+formBtn.addEventListener("click", getInputValue);
+
 export function getInputValue() {
   let inputObj = {};
   const name = document.getElementById("name-event");
