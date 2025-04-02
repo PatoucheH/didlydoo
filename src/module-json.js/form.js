@@ -12,7 +12,6 @@ addDate.addEventListener("click", (e) => {
   );
 });
 
-
 export function getInputValue() {
   let inputObj = {};
   const name = document.getElementById("name-event");
