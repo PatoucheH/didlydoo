@@ -11,22 +11,29 @@
   </head>
   <body>
     <header id="header"></header>
-    <form action="event.html" method="POST">
-      <label for="name-event">Enter the name of the event :</label>
-      <input type="text" id="name-event" required />
-      
-      <label for="author-event">Enter your name : </label>
-      <input type="text" id="author-event" required />
+    <main>
+      <form action="event.html" method="POST" id="my-form">
+        <label for="name-event">Enter the name of the event : </label>
+        <input type="text" id="name-event" required />
 
-      <label for="id-event">Enter the ID(password) of your event : </label>
-      <input type="text" required />
+        <label for="author-event">Enter your name : </label>
+        <input type="text" id="author-event" required />
 
-      <label for="desc-event">Enter the description of your event :</label>
-      <input type="text" id="desc-event" required />
+        <label for="id-event">Enter the ID (password) of your event : </label>
+        <input type="text" required />
 
-      <label for="date-event">Enter the date :</label>
-      <input type="date" id="date-event" required />
-      <button>submit</button>
-    </form>
+        <label for="desc-event">Enter the description of your event : </label>
+        <input type="text" id="desc-event" required />
+
+        <label for="date-event">Enter the date : </label>
+        <input type="date" id="date-event" required />
+        <img
+          src="../../public/plus-symbole-noir.png"
+          alt="add a date"
+          id="add-date"
+        />
+        <button type="submit" id="submit">Add the event</button>
+      </form>
+    </main>
   </body>
 </html>
