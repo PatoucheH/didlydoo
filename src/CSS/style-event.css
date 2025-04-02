@@ -1,0 +1,26 @@
+#attendance-grid {
+    display: grid;
+  }
+
+  .header {
+    text-align: center;
+  }
+  
+  .participant {
+    border: 1px solid black;
+    padding: 1rem;
+  }
+  
+  .availability {
+    border: 1px solid black;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .fa-solid.fa-thumbs-up {
+    color: green;
+  }
+
+  .fa-solid.fa-thumbs-down {
+    color: red;
+  }
