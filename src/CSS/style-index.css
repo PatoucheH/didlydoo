@@ -41,17 +41,18 @@ main {
 }
 
 #container {
+    width: 100vw;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
 }
 
 #event {
+    width: 30em;
+    height: 18em;
     text-align: center;
     background-color: rgb(177, 177, 177);
-    grid-row: 1 / 2;
     position: relative;
     margin: auto;
     padding: 15px;

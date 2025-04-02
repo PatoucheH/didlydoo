@@ -1,18 +1,18 @@
-/** @description -- Import the header */
+/** @description - Import the header */
 import { createHeader } from "./module-json.js/header.js";
-/** @description -- Import the .json data objects */
+/** @description - Import the .json data objects */
 import { getInfo } from "./module-json.js/get-json-info.js";
 
-/** @description -- Create the header of page */
+/** @description - Create the header of page */
 createHeader();
 
-/** @var {JSON[Object]} allInfo -- Contains the data of api in allInfo variable */
+/** @var {JSON[Object]} allInfo - Contains the data of api in allInfo variable */
 let allInfo = await getInfo("/api/events");
 
 /**
  * 
- * @param {JSON[Object]} data 
- * @description -- Iterate the array for display all events in db.json
+ * @param {JSON[Object]} data - Array of all events objects
+ * @description - Iterate the array for display all events in db.json
  */ 
 function getAllInfos(data) {
     // Debug
@@ -30,16 +30,16 @@ function getAllInfos(data) {
 
 /**
  * 
- * @param -- @var {JSON[Object]} allInfo
+ * @param - @var {JSON[Object]} allInfo
  */
 getAllInfos(allInfo);
 
 /**
  * 
- * @param {string} name 
- * @param {string} date 
- * @param {string} desc 
- * @param {string} id 
+ * @param {string} name - Name of Event
+ * @param {string} date - Date to Event created 
+ * @param {string} desc - Event description
+ * @param {string} id - Event ID
  */
 function createEventCard(name, date, desc, id) {
     const div = document.getElementById("container"); // Target the div container
