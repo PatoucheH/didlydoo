@@ -10,7 +10,7 @@ const form = document.getElementById("my-form");
 createHeader();
 
 /**
- * Add an input date to add another date to the event
+ * @description -- Add an input date to add another date to the event
  */
 addDate.addEventListener("click", (e) => {
   addDate.insertAdjacentHTML(
@@ -22,10 +22,11 @@ addDate.addEventListener("click", (e) => {
 
 const formBtn = document.getElementById("submit");
 
+
+
+
 formBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(getInputValue());
-  console.log("📤 Données envoyées :", JSON.stringify(getInputValue(), null, 2));
 
   fetch("http://localhost:3000/api/events/", {
     method: "POST",
