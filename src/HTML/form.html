@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../../public/date-danniversaire.png" />
-    <link rel="stylesheet" href="../CSS/styles.css"/>
+    <link rel="stylesheet" href="../CSS/styles.css" />
     <link rel="stylesheet" href="../CSS/style-form.css" />
     <script defer type="module" src="../main.js"></script>
     <title>Add an event</title>
@@ -12,14 +12,20 @@
   <body>
     <header id="header"></header>
     <form action="event.html" method="POST">
-      <label for="name-event">Enter the name :</label>
-      <input type="text" />
+      <label for="name-event">Enter the name of the event :</label>
+      <input type="text" id="name-event" required />
+      
+      <label for="author-event">Enter your name : </label>
+      <input type="text" id="author-event" required />
+
+      <label for="id-event">Enter the ID(password) of your event : </label>
+      <input type="text" required />
 
       <label for="desc-event">Enter the description of your event :</label>
-      <input type="text" />
+      <input type="text" id="desc-event" required />
 
       <label for="date-event">Enter the date :</label>
-      <input type="date" />
+      <input type="date" id="date-event" required />
       <button>submit</button>
     </form>
   </body>
