@@ -21,7 +21,7 @@ addDate.addEventListener("click", (e) => {
 });
 
 const formBtn = document.getElementById("submit");
-formBtn.addEventListener("click", getInputValue);
+
 
 
 
@@ -36,6 +36,7 @@ formBtn.addEventListener("click", (e) => {
     body: JSON.stringify(getInputValue()),
   })
     .then((response) => {
+      console.log(response);
       return response.json();
     })
     .then((data) => {
