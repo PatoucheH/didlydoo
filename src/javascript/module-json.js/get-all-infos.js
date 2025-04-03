@@ -1,3 +1,5 @@
+import { recipe } from "../event.js";
+
 /**
  * 
  * @param {JSON[Object]} data - Array of all events objects
@@ -30,11 +32,17 @@ function createEventCard(name, date, desc, id) {
     newSection.id = "event"; // Add an id "event"
     // Add event contains in the <section>
     newSection.innerHTML = `
-        <a href="./src/HTML/event.html" id="${id}" id="event-info">
+        <a href="./src/HTML/event.html" id="${id}" class="card">
           <h3>${name}</h3>
           <h6 class="desc">${desc}</h6>
           <p>created date : ${date}</p>
         </a>
     `
     div.appendChild(newSection); // Add <section> in <div> container
+    let a = document.querySelector(".card")
+    console.log(a.id)
+    a.addEventListener("click", function() {
+        let id = a.id
+        recipe(id);
+    })
 }
