@@ -3,7 +3,7 @@ import { getAllInfos } from "./module-json.js/get-all-infos.js";
 import { getInfo } from "./module-json.js/get-json-info.js";
 
 /** @description - Import the header */
-import { createHeader } from "./header.js";
+import { createHeader } from "./module-json.js/header.js";
 
 /** @description - Create the header of page */
 createHeader();
