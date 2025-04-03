@@ -107,4 +107,11 @@ export async function displayEventById(id) {
     modifyEvent(id);
     location.href = "./event.html";
   });
+
+  const addDate = document.createElement("button");
+  addDate.id = "add-date-btn";
+  addDate.textContent = "Add date";
+  addDate.addEventListener("click", (e) => {
+  });
+  container.appendChild(addDate);
 }
