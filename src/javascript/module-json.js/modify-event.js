@@ -1,3 +1,5 @@
+
+
 export function modifyEvent(id) {
   const modifyBtn = document.getElementById("btn-modify");
   const name = document.getElementById("input-name");
@@ -35,7 +37,6 @@ export function modifyEvent(id) {
     })
     .then((data) => {
       console.log(`Succes ${data}`);
-      alert(`Succes event modified.`);
     })
     .catch((e) => console.error(e));
 }

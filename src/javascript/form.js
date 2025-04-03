@@ -21,7 +21,6 @@ addDate.addEventListener("click", (e) => {
   );
 });
 
-
 const formBtn = document.getElementById("submit");
 
 formBtn.addEventListener("click", (e) => {
@@ -38,7 +37,6 @@ formBtn.addEventListener("click", (e) => {
       })
       .then((data) => {
         console.log("Succes:", data);
-        alert("Succes : Event create.");
 
         localStorage.setItem("event", data.id);
       })
@@ -47,6 +45,5 @@ formBtn.addEventListener("click", (e) => {
       });
   } catch (e) {
     console.log(e);
-    alert(e);
   }
 });
