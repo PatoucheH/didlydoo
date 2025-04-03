@@ -12,6 +12,7 @@ createHeader();
 /**
  * @description -- Add an input date to add another date to the event
  */
+
 addDate.addEventListener("click", (e) => {
   addDate.insertAdjacentHTML(
     "beforebegin",
@@ -20,10 +21,10 @@ addDate.addEventListener("click", (e) => {
   );
 });
 
+
 const formBtn = document.getElementById("submit");
 
 formBtn.addEventListener("click", (e) => {
-  // e.preventDefault();
   try {
     fetch("http://localhost:3000/api/events/", {
       method: "POST",
