@@ -4,16 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../../public/date-danniversaire.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <title>Evenement</title>
-    <link rel="stylesheet" href="../CSS/styles.css"/>
+    <link rel="stylesheet" href="../CSS/styles.css" />
     <link rel="stylesheet" href="../CSS/style-event.css" />
     <script defer type="module" src="../javascript/event.js"></script>
   </head>
   <body>
-    <header  id="header"></header>
+    <header id="header"></header>
     <a href="../../index.html"><button>Menu event</button></a>
-    <div id="event">
+    <button id="modify-btn">Modify</button>
+    <div id="div-input" style="display: none">
+      <input type="text" placeholder="Name" />
+      <input type="date" />
+      <img
+        src="../../public/plus-symbole-noir.png"
+        alt="add a date"
+        id="add-date"
+      />
+      <input type="text" placeholder="author" />
+      <input type="text" placeholder="desc" />
     </div>
+    <div id="event"></div>
   </body>
 </html>

@@ -83,4 +83,22 @@ export async function displayEventById(id) {
       });
     location.href = "../../../index.html";
   });
+
+  const modifyBtn = document.getElementById("modify-btn");
+  modifyBtn.addEventListener("click", (e) => {
+    const divInput = document.getElementById("div-input");
+    if (divInput.style.display === "none") {
+      divInput.style.display = "block";
+    } else if ((divInput.style.display = "block")) {
+      divInput.style.display = "none";
+    }
+  });
+
+  const addDate = document.getElementById("add-date");
+  addDate.addEventListener("click", (e) => {
+    addDate.insertAdjacentHTML(
+      "beforebegin",
+      `<input type="date"/>`
+    );
+  });
 }

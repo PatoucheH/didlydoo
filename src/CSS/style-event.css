@@ -1,26 +1,31 @@
 #attendance-grid {
-    display: grid;
-  }
+  display: grid;
+}
 
-  .header {
-    text-align: center;
-  }
-  
-  .participant {
-    border: 1px solid black;
-    padding: 1rem;
-  }
-  
-  .availability {
-    border: 1px solid black;
-    text-align: center;
-    padding: 1rem;
-  }
+.header {
+  text-align: center;
+}
 
-  .fa-solid.fa-thumbs-up {
-    color: green;
-  }
+.participant {
+  border: 1px solid black;
+  padding: 1rem;
+}
 
-  .fa-solid.fa-thumbs-down {
-    color: red;
-  }
+.availability {
+  border: 1px solid black;
+  text-align: center;
+  padding: 1rem;
+}
+
+.fa-solid.fa-thumbs-up {
+  color: green;
+}
+
+.fa-solid.fa-thumbs-down {
+  color: red;
+}
+
+#add-date {
+  width: 15px;
+  cursor: pointer;
+}
