@@ -1,13 +1,17 @@
 import { getInfo } from "./get-json-info.js";
+import { modifyEvent } from "./modify-event.js";
 
 export async function displayEventById(id) {
   let event = await getInfo(`/api/events/${id}`);
   let container = document.getElementById("event");
   container.innerHTML = `
-            <h2>${event.name}</h2>
-            <p>${event.description}</p>
-            <p>by ${event.author}</p>
-            <div id="attendance-grid"></div>`;
+    <section id="section">
+      <h2>${event.name}</h2>
+      <p>${event.description}</p>
+      <p>by ${event.author}</p>
+      <div id="attendance-grid"></div>
+    </section>
+  `;
 
   let tabel = document.getElementById("attendance-grid");
 
@@ -19,6 +23,9 @@ export async function displayEventById(id) {
   // create header dates, determines the number of columns grid
   let dates = event.dates;
   tabel.style.gridTemplateColumns = `auto repeat(${dates.length}, 1fr)`;
+  tabel.style.width = "900px";
+  tabel.style.position = "relative";
+  tabel.style.margin = "auto";
   let datesSave = [];
   dates.forEach((element) => {
     let header = document.createElement("div");
@@ -65,7 +72,8 @@ export async function displayEventById(id) {
   });
 
   const deleteBtn = document.createElement("button");
-  deleteBtn.textContent = "Delete event";
+  deleteBtn.id = "del-btn";
+  deleteBtn.textContent = "Delete Event";
   container.appendChild(deleteBtn);
   deleteBtn.addEventListener("click", (e) => {
     fetch(`http://localhost:3000/api/events/${id}/`, {
@@ -84,6 +92,7 @@ export async function displayEventById(id) {
     location.href = "../../../index.html";
   });
 
+<<<<<<< HEAD
   //modify attendances
   let form = document.createElement("form");
   form.action = "./event.html";
@@ -141,3 +150,24 @@ export async function displayEventById(id) {
     
 });
 } 
+=======
+  const modifyBtn = document.createElement("button");
+  modifyBtn.id = "modify-btn";
+  modifyBtn.textContent = "Update Event";
+  container.appendChild(modifyBtn)
+  modifyBtn.addEventListener("click", (e) => {
+    const divInput = document.getElementById("div-input");
+    if (divInput.style.display === "none") {
+      divInput.style.display = "block";
+    } else if ((divInput.style.display = "block")) {
+      divInput.style.display = "none";
+    }
+  });
+
+  const acceptModify = document.getElementById("accept-modify-btn");
+  acceptModify.addEventListener("click", (e) => {
+    modifyEvent(id);
+    location.href = "./event.html";
+  });
+}
+>>>>>>> 0c0ad1438630645c8ff1bd69705f30c4e0c27a63

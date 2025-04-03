@@ -12,6 +12,7 @@ createHeader();
 /**
  * @description -- Add an input date to add another date to the event
  */
+
 addDate.addEventListener("click", (e) => {
   addDate.insertAdjacentHTML(
     "beforebegin",
@@ -23,7 +24,6 @@ addDate.addEventListener("click", (e) => {
 const formBtn = document.getElementById("submit");
 
 formBtn.addEventListener("click", (e) => {
-  // e.preventDefault();
   try {
     fetch("http://localhost:3000/api/events/", {
       method: "POST",
@@ -37,7 +37,6 @@ formBtn.addEventListener("click", (e) => {
       })
       .then((data) => {
         console.log("Succes:", data);
-        alert("Succes : Event create.");
 
         localStorage.setItem("event", data.id);
       })
@@ -46,6 +45,5 @@ formBtn.addEventListener("click", (e) => {
       });
   } catch (e) {
     console.log(e);
-    alert(e);
   }
 });

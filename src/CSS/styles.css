@@ -1,3 +1,11 @@
+body {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  letter-spacing: 1.5px;
+}
+
 #header {
   width: 95vw;
   margin: 0 auto;
