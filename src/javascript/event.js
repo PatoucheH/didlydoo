@@ -4,5 +4,9 @@ import { createHeader } from "./module-json.js/header.js";
 createHeader();
 
 let id = localStorage.getItem("event");
+window.addEventListener("DOMContentLoaded", (e) => {
+    
+  console.log("mabit");
 
-displayEventById(id);
+  displayEventById(id);
+});

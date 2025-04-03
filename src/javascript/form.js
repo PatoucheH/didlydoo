@@ -38,6 +38,8 @@ formBtn.addEventListener("click", (e) => {
       .then((data) => {
         console.log("Succes:", data);
         alert("Succes : Event create.");
+
+        localStorage.setItem("event", data.id);
       })
       .catch((error) => {
         console.error("Error:", error);

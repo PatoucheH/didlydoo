@@ -63,4 +63,10 @@ export async function displayEventById(id) {
       });
     }
   });
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete event";
+  container.appendChild(deleteBtn);
+  deleteBtn.addEventListener("click", (e) => {
+    
+  });
 }
