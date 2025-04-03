@@ -1,8 +1,76 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  position: absolute;
+}
+
+#main-menu {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 4px 10px 10px rgb(90, 90, 90);
+  border: 0px solid rgb(0, 0, 0);
+}
+
+#main-menu:hover {
+  box-shadow: 3px 5px 4px rgb(90, 90, 90);
+}
+
+#event{
+  display: grid;
+  grid-template-rows: 100px 1fr 1fr 1fr ;
+
+}
+
+#section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  grid-row: 2 / 3;
+}
+
 #attendance-grid {
+  grid-row: 3 / 4;
+  margin: 20px;
   display: grid;
 }
 
-.header {
+#del-btn {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  width: 110px;
+  height: 50px;
+  position: relative;
+  margin: auto;
+  grid-row: 1 / 2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 4px 10px 10px rgb(90, 90, 90);
+  border: 0px solid rgb(0, 0, 0);
+}
+
+#del-btn:hover {
+  box-shadow: 3px 5px 4px rgb(90, 90, 90);
+}
+
+#header {
   text-align: center;
 }
 
@@ -20,7 +88,13 @@
 .fa-solid.fa-thumbs-up {
   color: green;
 }
+.fa-solid.fa-thumbs-up {
+  color: green;
+}
 
+.fa-solid.fa-thumbs-down {
+  color: red;
+}
 .fa-solid.fa-thumbs-down {
   color: red;
 }
