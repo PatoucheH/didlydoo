@@ -1,4 +1,5 @@
 import { getInfo } from "./get-json-info.js";
+import { modifyEvent } from "./modify-event.js";
 
 export async function displayEventById(id) {
   let event = await getInfo(`/api/events/${id}`);
@@ -98,7 +99,12 @@ export async function displayEventById(id) {
   addDate.addEventListener("click", (e) => {
     addDate.insertAdjacentHTML(
       "beforebegin",
-      `<input type="date"/>`
+      `<input type="date" class="input-date"/>`
     );
+  });
+
+  const acceptModify = document.getElementById("accept-modify-btn");
+  acceptModify.addEventListener("click", (e) => {
+    modifyEvent(id);
   });
 }
