@@ -1,26 +1,51 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+#main-menu {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  margin-top: 50px;
+  
+  margin-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 4px 10px 10px rgb(90, 90, 90);
+  border: 0px solid rgb(0, 0, 0);
+}
+
+#main-menu:hover {
+  box-shadow: 3px 5px 4px rgb(90, 90, 90);
+}
+
 #attendance-grid {
-    display: grid;
-  }
+  margin: 20px;
+  display: grid;
+}
 
-  .header {
-    text-align: center;
-  }
-  
-  .participant {
-    border: 1px solid black;
-    padding: 1rem;
-  }
-  
-  .availability {
-    border: 1px solid black;
-    text-align: center;
-    padding: 1rem;
-  }
+#header {
+  text-align: center;
+}
 
-  .fa-solid.fa-thumbs-up {
-    color: green;
-  }
+.participant {
+  border: 1px solid black;
+  padding: 1rem;
+}
 
-  .fa-solid.fa-thumbs-down {
-    color: red;
-  }
+.availability {
+  border: 1px solid black;
+  text-align: center;
+  padding: 1rem;
+}
+
+.fa-solid.fa-thumbs-up {
+  color: green;
+}
+
+.fa-solid.fa-thumbs-down {
+  color: red;
+}
