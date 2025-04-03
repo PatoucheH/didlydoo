@@ -73,7 +73,7 @@ export async function displayEventById(id) {
 
   const deleteBtn = document.createElement("button");
   deleteBtn.id = "del-btn";
-  deleteBtn.textContent = "Delete event";
+  deleteBtn.textContent = "Delete Event";
   container.appendChild(deleteBtn);
   deleteBtn.addEventListener("click", (e) => {
     fetch(`http://localhost:3000/api/events/${id}/`, {
@@ -92,7 +92,10 @@ export async function displayEventById(id) {
     location.href = "../../../index.html";
   });
 
-  const modifyBtn = document.getElementById("modify-btn");
+  const modifyBtn = document.createElement("button");
+  modifyBtn.id = "modify-btn";
+  modifyBtn.textContent = "Update Event";
+  container.appendChild(modifyBtn)
   modifyBtn.addEventListener("click", (e) => {
     const divInput = document.getElementById("div-input");
     if (divInput.style.display === "none") {
