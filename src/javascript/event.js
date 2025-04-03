@@ -5,8 +5,5 @@ createHeader();
 
 let id = localStorage.getItem("event");
 window.addEventListener("DOMContentLoaded", (e) => {
-    
-  console.log("mabit");
-
   displayEventById(id);
 });

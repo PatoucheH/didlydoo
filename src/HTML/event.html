@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../../public/date-danniversaire.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <title>Evenement</title>
-    <link rel="stylesheet" href="../CSS/styles.css"/>
+    <link rel="stylesheet" href="../CSS/styles.css" />
     <link rel="stylesheet" href="../CSS/style-event.css" />
     <script defer type="module" src="../javascript/event.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,9 +17,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header  id="header"></header>
-    <a href="../../index.html"><button id="main-menu">Menu event</button></a>
-    <div id="event">
+    <header id="header"></header>
+    <a href="../../index.html"><button>Menu event</button></a>
+    <button id="modify-btn">Modify</button>
+    <div id="div-input" style="display: none">
+      <input type="text" placeholder="Name" id="input-name" />
+      <input type="date" class="input-date" />
+      <img
+        src="../../public/plus-symbole-noir.png"
+        alt="add a date"
+        id="add-date"
+      />
+      <input type="text" placeholder="author" id="input-author" />
+      <input type="text" placeholder="desc" id="input-desc" />
+      <button id="accept-modify-btn">Accept change</button>
     </div>
+    <div id="event"></div>
   </body>
 </html>

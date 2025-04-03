@@ -88,7 +88,18 @@ body {
 .fa-solid.fa-thumbs-up {
   color: green;
 }
+.fa-solid.fa-thumbs-up {
+  color: green;
+}
 
 .fa-solid.fa-thumbs-down {
   color: red;
+}
+.fa-solid.fa-thumbs-down {
+  color: red;
+}
+
+#add-date {
+  width: 15px;
+  cursor: pointer;
 }
