@@ -92,7 +92,26 @@ export async function displayEventById(id) {
     location.href = "../../../index.html";
   });
 
-<<<<<<< HEAD
+  const modifyBtn = document.createElement("button");
+  modifyBtn.id = "modify-btn";
+  modifyBtn.textContent = "Update Event";
+  container.appendChild(modifyBtn)
+  modifyBtn.addEventListener("click", (e) => {
+    const divInput = document.getElementById("div-input");
+    if (divInput.style.display === "none") {
+      divInput.style.display = "block";
+    } else if ((divInput.style.display = "block")) {
+      divInput.style.display = "none";
+    }
+  });
+
+  const acceptModify = document.getElementById("accept-modify-btn");
+  acceptModify.addEventListener("click", (e) => {
+    modifyEvent(id);
+    location.href = "./event.html";
+  });
+
+
   //modify attendances
   let form = document.createElement("form");
   form.action = "./event.html";
@@ -149,25 +168,4 @@ export async function displayEventById(id) {
     console.log(newParticipantObj);
     
 });
-} 
-=======
-  const modifyBtn = document.createElement("button");
-  modifyBtn.id = "modify-btn";
-  modifyBtn.textContent = "Update Event";
-  container.appendChild(modifyBtn)
-  modifyBtn.addEventListener("click", (e) => {
-    const divInput = document.getElementById("div-input");
-    if (divInput.style.display === "none") {
-      divInput.style.display = "block";
-    } else if ((divInput.style.display = "block")) {
-      divInput.style.display = "none";
-    }
-  });
-
-  const acceptModify = document.getElementById("accept-modify-btn");
-  acceptModify.addEventListener("click", (e) => {
-    modifyEvent(id);
-    location.href = "./event.html";
-  });
 }
->>>>>>> 0c0ad1438630645c8ff1bd69705f30c4e0c27a63
