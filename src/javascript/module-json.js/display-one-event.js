@@ -5,10 +5,13 @@ export async function displayEventById(id) {
   let event = await getInfo(`/api/events/${id}`);
   let container = document.getElementById("event");
   container.innerHTML = `
-            <h2>${event.name}</h2>
-            <p>${event.description}</p>
-            <p>by ${event.author}</p>
-            <div id="attendance-grid"></div>`;
+    <section id="section">
+      <h2>${event.name}</h2>
+      <p>${event.description}</p>
+      <p>by ${event.author}</p>
+      <div id="attendance-grid"></div>
+    </section>
+  `;
 
   let tabel = document.getElementById("attendance-grid");
 
@@ -20,7 +23,7 @@ export async function displayEventById(id) {
   // create header dates, determines the number of columns grid
   let dates = event.dates;
   tabel.style.gridTemplateColumns = `auto repeat(${dates.length}, 1fr)`;
-  tabel.style.width = "700px";
+  tabel.style.width = "900px";
   tabel.style.position = "relative";
   tabel.style.margin = "auto";
   let datesSave = [];
@@ -69,6 +72,7 @@ export async function displayEventById(id) {
   });
 
   const deleteBtn = document.createElement("button");
+  deleteBtn.id = "del-btn";
   deleteBtn.textContent = "Delete event";
   container.appendChild(deleteBtn);
   deleteBtn.addEventListener("click", (e) => {
