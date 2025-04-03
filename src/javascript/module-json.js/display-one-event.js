@@ -19,6 +19,9 @@ export async function displayEventById(id) {
   // create header dates, determines the number of columns grid
   let dates = event.dates;
   tabel.style.gridTemplateColumns = `auto repeat(${dates.length}, 1fr)`;
+  tabel.style.width = "700px";
+  tabel.style.position = "relative";
+  tabel.style.margin = "auto";
   let datesSave = [];
   dates.forEach((element) => {
     let header = document.createElement("div");
