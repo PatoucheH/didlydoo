@@ -102,16 +102,9 @@ export async function displayEventById(id) {
     }
   });
 
-  const addDate = document.getElementById("add-date");
-  addDate.addEventListener("click", (e) => {
-    addDate.insertAdjacentHTML(
-      "beforebegin",
-      `<input type="date" class="input-date"/>`
-    );
-  });
-
   const acceptModify = document.getElementById("accept-modify-btn");
   acceptModify.addEventListener("click", (e) => {
     modifyEvent(id);
+    location.href = "./event.html";
   });
 }

@@ -1,5 +1,3 @@
-
-
 export function modifyEvent(id) {
   const modifyBtn = document.getElementById("btn-modify");
   const name = document.getElementById("input-name");
@@ -9,13 +7,6 @@ export function modifyEvent(id) {
 
   let inputObject = {};
   if (name.value !== "") inputObject.name = name.value;
-
-  let dateArray = [];
-  Array.from(dateInput).map((el) => {
-    if (el.value !== "") dateArray.push(el.value);
-  });
-  if (dateArray.length > 0) inputObject.dates = dateArray;
-
   if (author.value !== "") inputObject.author = author.value;
   if (desc.value !== "") inputObject.description = desc.value;
 
@@ -29,9 +20,10 @@ export function modifyEvent(id) {
     body: JSON.stringify(inputObject),
   })
     .then(async (response) => {
+      console.log(response);
       if (!response.ok) {
         const error = await response.json();
-        throw new Error(`Error : ${error.message}`);
+        throw new Error(`Error : ${error}`);
       }
       return response.json();
     })
