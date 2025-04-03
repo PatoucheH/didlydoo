@@ -13,3 +13,12 @@ let allInfo = await getInfo("/api/events");
 
 /** @description Call getAllInfo function with @param {JSON[Object]} allInfo */
 getAllInfos(allInfo);
+
+const container = document.getElementById("container");
+export let idEvent = null;
+container.addEventListener("click", (e) => {
+  if (e.target.tagName === "SECTION") {
+    console.log(e.target.firstElementChild.id);
+    idEvent = e.target.firstElementChild.id;
+  }
+});
