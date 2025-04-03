@@ -29,11 +29,13 @@ function createEventCard(name, date, desc, id) {
   const newSection = document.createElement("section"); // Create new <section>
   newSection.id = "event"; // Add an id "event"
   // Add event contains in the <section>
+  const newDate = date.split("T")[0];
+
   newSection.innerHTML = `
             <a href="./src/HTML/event.html" id="${id}" class="card">
             <h3>${name}</h3>
             <h6 class="desc">${desc}</h6>
-            <p>created date : ${date}</p>
+            <p>created date : ${newDate}</p>
             </a>
         `;
   div.appendChild(newSection); // Add <section> in <div> container

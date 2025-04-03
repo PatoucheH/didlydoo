@@ -73,7 +73,7 @@ export async function displayEventById(id) {
 
   const deleteBtn = document.createElement("button");
   deleteBtn.id = "del-btn";
-  deleteBtn.textContent = "Delete event";
+  deleteBtn.textContent = "Delete Event";
   container.appendChild(deleteBtn);
   deleteBtn.addEventListener("click", (e) => {
     fetch(`http://localhost:3000/api/events/${id}/`, {
@@ -92,7 +92,10 @@ export async function displayEventById(id) {
     location.href = "../../../index.html";
   });
 
-  const modifyBtn = document.getElementById("modify-btn");
+  const modifyBtn = document.createElement("button");
+  modifyBtn.id = "modify-btn";
+  modifyBtn.textContent = "Update Event";
+  container.appendChild(modifyBtn)
   modifyBtn.addEventListener("click", (e) => {
     const divInput = document.getElementById("div-input");
     if (divInput.style.display === "none") {
@@ -108,6 +111,65 @@ export async function displayEventById(id) {
     location.href = "./event.html";
   });
 
+
+  //modify attendances
+  let form = document.createElement("form");
+  form.action = "./event.html";
+  let newAttendance = document.createElement("div");
+  newAttendance.id = "attendance-input";
+  newAttendance.style.display = "grid";
+  newAttendance.style.gridTemplateColumns = `auto repeat(${dates.length}, 1fr)`;
+  form.appendChild(newAttendance);
+
+  let newParticipant = document.createElement("div");
+  newParticipant.classList.add("participant");
+  let input = document.createElement("input");
+  input.type = "text";
+  input.placeholder = "Name";
+  newParticipant.appendChild(input);
+  newAttendance.appendChild(newParticipant);
+
+  datesSave.forEach((date) => {
+    let availability = document.createElement("div");
+    availability.id = `${date}`
+    availability.classList.add("availability");
+    availability.innerHTML = `<input type="radio" id="${date}-true" name="${date}" value="true">
+                              <label for="${date}-true"><i class="fa-solid fa-thumbs-up"></i></label>
+                              <input type="radio" id="${date}-false" name="${date}" value="false">
+                              <label for="${date}-false"><i class="fa-solid fa-thumbs-down"></i></label>`
+    newAttendance.appendChild(availability);
+  })
+  let submit = document.createElement("input");
+  submit.type = "submit";
+  submit.id = "new-attendance-submit";
+  submit.value = "Submit";
+  form.appendChild(submit);
+  container.appendChild(form);
+  let submitForm = document.getElementById("new-attendance-submit");
+  submitForm.addEventListener("click", (e) => {
+    e.preventDefault();
+    let newParticipantObj = {};
+    let groupes = new Set(); 
+    document.querySelectorAll('input[type="radio"]').forEach(radio => {
+        groupes.add(radio.name);
+    });
+    let datesArray = [];
+    groupes.forEach(name => {
+        let selections = {};
+        let selected = document.querySelector(`input[name="${name}"]:checked`);
+        if(selected) {
+          selections["date"] = name;
+          selections["available"] = selected.value;
+          datesArray.push(selections);
+        }
+    });
+    newParticipantObj["name"] = input.value;
+    newParticipantObj["dates"] = datesArray;
+    console.log(newParticipantObj);
+    
+});
+  
+
   const addDate = document.createElement("button");
   addDate.id = "add-date-btn";
   addDate.textContent = "Add date";
@@ -115,3 +177,4 @@ export async function displayEventById(id) {
   });
   container.appendChild(addDate);
 }
+
