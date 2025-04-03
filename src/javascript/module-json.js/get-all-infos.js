@@ -1,9 +1,3 @@
-/** @description - Import the header */
-import { createHeader } from "./header.js";
-
-/** @description - Create the header of page */
-createHeader();
-
 /**
  * 
  * @param {JSON[Object]} data - Array of all events objects
