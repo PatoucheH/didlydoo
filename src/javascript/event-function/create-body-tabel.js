@@ -1,3 +1,11 @@
+/**
+ * 
+ * @param {Array[object]} attendances - response API with all attendances for all events
+ * @param {Array[string]} dates - receive an array of all dates event
+ * @param {HTMLElement} tabel - where we display header of tabel
+ * @param {string} id - id of the event
+ * @description - create tabel with availibilities for the participants of events
+ */
 export function createBody(attendances, dates, tabel, id) {
   //participants attendances
   attendances.forEach((attendance) => {

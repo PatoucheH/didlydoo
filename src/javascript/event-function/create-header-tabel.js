@@ -1,3 +1,9 @@
+/**
+ * 
+ * @param {Array[string]} dates - receive an array of all dates event
+ * @param {HTMLElement} tabel - where we display header of tabel
+ * @description - Create header of tabel with dates as titles
+ */
 export function createHeader(dates, tabel) {
   // create header blank
   let firstHeader = document.createElement("div");

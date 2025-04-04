@@ -1,3 +1,9 @@
+/**
+ * 
+ * @param {Array[string]} dates - receive an array of all dates event
+ * @param {HTMLElement} container - container that receive form
+ * @description - create form to add new participant to event
+ */
 export function createFormAttendances(dates, container) {
     //modify attendances
     let form = document.createElement("form");
