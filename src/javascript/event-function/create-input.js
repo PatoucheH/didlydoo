@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {div} div div to add the input div
+ * Create an input div with the information for the event to modify
+ */
 export function createInputDiv(div) {
   const divToAdd = document.createElement("div");
   const html = `<input type="text" placeholder="Event name">\n

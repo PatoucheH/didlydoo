@@ -1,3 +1,10 @@
+/**
+ * 
+ * @param {str} id the id of the event 
+ * @param {array} arrayDate An array with all the date to post 
+ *  function to add the date to the db 
+ */
+
 export function addDate(id, arrayDate) {
   try {
     fetch(`http://localhost:3000/api/events/${id}/add_dates`, {

@@ -1,6 +1,5 @@
-import { createHeader } from "./module-json.js/header.js";
-import { getInputValue } from "./module-json.js/get-input-value.js";
-import { postNewEvent } from "./module-json.js/post-new-event.js";
+import { createHeader } from "./general-utils/header.js";
+import { errorOrCreateEvent } from "./form-function/create-event-or-display-error.js";
 
 // button to add a input date
 const addDate = document.getElementById("add-date");
@@ -21,7 +20,14 @@ addDate.addEventListener("click", (e) => {
         <input type="date" class="date" required />`
   );
 });
-
+/**
+ * Select the button to validate the form 
+ */
 const formBtn = document.getElementById("submit");
 
-formBtn.addEventListener("click", (e) => postNewEvent(getInputValue()));
+/**
+ * When the form is send create an error if the inputs are not available and send the form if the input are available
+ */
+formBtn.addEventListener("click", (e) => {
+  errorOrCreateEvent();
+});

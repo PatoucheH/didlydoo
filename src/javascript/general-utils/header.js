@@ -1,3 +1,7 @@
+/**
+ * Create the header for each page 
+ */
+
 export function createHeader() {
     const header = document.getElementById('header');
     header.innerHTML = `
