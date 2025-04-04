@@ -22,5 +22,4 @@ export async function bestPossibleDate(id) {
         });
       });
     console.log(datesWithParticipantsPresence);
-    
 }
