@@ -201,7 +201,6 @@ export async function displayEventById(id) {
       console.log(e);
     }
   });
-
   const divAddDate = document.createElement("div");
   divAddDate.innerHTML = `<input type="date" class="add-date-input">`;
   const addDateEvent = document.createElement("button");
