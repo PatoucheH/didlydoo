@@ -1,0 +1,332 @@
+
+@media screen and (max-width: 1360px) {
+    #attendance-grid {
+      max-height: 20em;
+      width: 60em !important;
+      padding: 25px;
+      overflow-y: auto;
+      overflow-x: auto;
+      position: relative;
+      margin: auto;
+      grid-row: 3 / 4;
+      grid-column: 1 / 4;
+      display: grid;
+      border: 2px solid black;
+      border-radius: 8px;
+      box-shadow: 5px 5px 5px rgb(90, 90, 90);
+    }
+  
+    #attendance-input {
+      box-shadow: 4px 10px 10px rgb(90, 90, 90);
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 8px;
+      padding: 25px;
+      max-width: 60em;
+      overflow: auto;
+      margin-top: 80px;
+      margin-bottom: 30px;
+    }
+  
+  }
+  
+  @media screen and (max-width: 1040px) {
+    #attendance-grid {
+      max-height: 22em;
+      width: 50em !important;
+      padding: 25px;
+      overflow-y: auto;
+      overflow-x: auto;
+      position: relative;
+      margin: auto;
+      grid-row: 3 / 4;
+      grid-column: 1 / 4;
+      display: grid;
+      border: 2px solid black;
+      border-radius: 8px;
+      box-shadow: 5px 5px 5px rgb(90, 90, 90);
+    }
+  
+    #attendance-input {
+      box-shadow: 4px 10px 10px rgb(90, 90, 90);
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 8px;
+      padding: 25px;
+      max-width: 50em;
+      overflow: auto;
+      margin-top: 80px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 875px) {
+    #section {
+      position: relative;
+      margin: 0 auto;
+      width: 36em;
+      padding: 25px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      grid-row: 2 / 3;
+      grid-column: 1 / 4;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      border: 2px solid black;
+      border-radius: 8px;
+      box-shadow: 5px 5px 5px rgb(90, 90, 90);
+    }
+  
+    #attendance-grid {
+      max-height: 25em;
+      width: 36em !important;
+      overflow-y: auto;
+      overflow-x: auto;
+      position: relative;
+      margin: auto;
+      grid-row: 3 / 4;
+      grid-column: 1 / 4;
+      display: grid;
+      border: 2px solid black;
+      border-radius: 8px;
+      box-shadow: 5px 5px 5px rgb(90, 90, 90);
+    }
+  
+    #attendance-input {
+      box-shadow: 4px 10px 10px rgb(90, 90, 90);
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 8px;
+      padding: 25px;
+      max-width: 36em;
+      overflow: auto;
+      margin-top: 80px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    #event {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100px 80px 80px 1fr 400px 1fr;
+      gap: 10px;
+    }
+    
+    #section {
+      position: relative;
+      margin: 0 auto;
+      width: 30em;
+      padding: 25px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      grid-row: 4 / 5;
+      grid-column: 1 / 4;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      border: 2px solid black;
+      border-radius: 8px;
+      box-shadow: 5px 5px 5px rgb(90, 90, 90);
+    }
+  
+    #attendance-grid {
+      max-height: 25em;
+      width: 30em !important;
+      overflow-y: auto;
+      overflow-x: auto;
+      position: relative;
+      margin: auto;
+      grid-row: 5 / 6;
+      grid-column: 1 / 4;
+      display: grid;
+      border: 2px solid black;
+      border-radius: 8px;
+      box-shadow: 5px 5px 5px rgb(90, 90, 90);
+    }
+  
+    #attendance-input {
+      box-shadow: 4px 10px 10px rgb(90, 90, 90);
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 8px;
+      padding: 25px;
+      max-width: 30em;
+      overflow: auto;
+      margin-top: 80px;
+      margin-bottom: 30px;
+    }
+  
+    #form {
+      position: relative;
+      margin: 0 auto;
+      grid-row: 6 / 7;
+      grid-column: 1 / 4;
+    }
+  
+    #del-btn {
+      grid-row: 2 / 3;
+      grid-column: 1 / 4;
+  
+    }
+  
+    #modify-btn {
+      grid-row: 1 / 2;
+      grid-column: 1 / 4;
+  
+    }
+  
+    #div-add-date {
+      grid-row: 3 / 4;
+      grid-column: 1 / 4;
+    }
+  }
+  
+  @media screen and (max-width: 580px) {
+    #event {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100px 80px 80px 1fr 400px 1fr;
+      gap: 10px;
+    }
+    
+    #section {
+      position: relative;
+      margin: 0 auto;
+      width: 20em;
+      padding: 25px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      grid-row: 4 / 5;
+      grid-column: 1 / 4;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      border: 2px solid black;
+      border-radius: 8px;
+      box-shadow: 5px 5px 5px rgb(90, 90, 90);
+    }
+  
+    #attendance-grid {
+      max-height: 25em;
+      width: 20em !important;
+      overflow-y: auto;
+      overflow-x: auto;
+      position: relative;
+      margin: auto;
+      grid-row: 5 / 6;
+      grid-column: 1 / 4;
+      display: grid;
+      border: 2px solid black;
+      border-radius: 8px;
+      box-shadow: 5px 5px 5px rgb(90, 90, 90);
+    }
+  
+    #attendance-input {
+      box-shadow: 4px 10px 10px rgb(90, 90, 90);
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 20em;
+      overflow: auto;
+      margin-top: 80px;
+      margin-bottom: 30px;
+    }
+  
+    #form {
+      position: relative;
+      margin: 0 auto;
+      grid-row: 6 / 7;
+      grid-column: 1 / 4;
+    }
+  
+    #del-btn {
+      grid-row: 2 / 3;
+      grid-column: 1 / 4;
+  
+    }
+  
+    #modify-btn {
+      grid-row: 1 / 2;
+      grid-column: 1 / 4;
+  
+    }
+  
+    #div-add-date {
+      grid-row: 3 / 4;
+      grid-column: 1 / 4;
+    }
+  }
+  
+  @media screen and (max-width: 380px) {
+    #event {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100px 80px 80px 1fr 400px 1fr;
+      gap: 10px;
+    }
+    
+    #section {
+      position: relative;
+      margin: 0 auto;
+      width: 15em;
+      padding: 25px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      grid-row: 4 / 5;
+      grid-column: 1 / 4;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      border: 2px solid black;
+      border-radius: 8px;
+      box-shadow: 5px 5px 5px rgb(90, 90, 90);
+    }
+  
+    #attendance-grid {
+      max-height: 25em;
+      width: 15em !important;
+      overflow-y: auto;
+      overflow-x: auto;
+      position: relative;
+      margin: auto;
+      grid-row: 5 / 6;
+      grid-column: 1 / 4;
+      display: grid;
+      border: 2px solid black;
+      border-radius: 8px;
+      box-shadow: 5px 5px 5px rgb(90, 90, 90);
+    }
+  
+    #attendance-input {
+      box-shadow: 4px 10px 10px rgb(90, 90, 90);
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 15em;
+      overflow: auto;
+      margin-top: 80px;
+      margin-bottom: 30px;
+    }
+  
+    #form {
+      position: relative;
+      margin: 0 auto;
+      grid-row: 6 / 7;
+      grid-column: 1 / 4;
+    }
+  
+    #del-btn {
+      grid-row: 2 / 3;
+      grid-column: 1 / 4;
+  
+    }
+  
+    #modify-btn {
+      grid-row: 1 / 2;
+      grid-column: 1 / 4;
+  
+    }
+  
+    #div-add-date {
+      grid-row: 3 / 4;
+      grid-column: 1 / 4;
+    }
+  }
