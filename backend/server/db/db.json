@@ -18,13 +18,17 @@
         "dates": [
           {
             "date": "2025-04-07",
-            "available": false
+            "available": true
           },
           {
-            "date": "2025-05-03",
-            "available": false
+            "date": "2025-04-16",
+            "available": true
           }
         ]
+      },
+      {
+        "name": "inox",
+        "dates": []
       }
     ]
   },

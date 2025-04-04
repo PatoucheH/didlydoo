@@ -70,8 +70,12 @@ export async function displayEventById(idEvent) {
     participants.forEach((el) => {
       participantsArray.push(el.innerHTML);
     });
+    console.log(participantsArray);
+    console.log(id);
+    
+    
 
-    if (participantsArray.includes(input.value)) {
+    if (!participantsArray.includes(input.value)) {
       attendancesFormEvent(id, "POST");
     } else {
       attendancesFormEvent(id, "PATCH");
