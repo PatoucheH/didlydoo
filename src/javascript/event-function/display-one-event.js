@@ -1,8 +1,8 @@
-import { getInfo } from "./general-utils/get-json-info.js";
+import { getInfo } from "../general-utils/get-json-info.js";
 import { modifyEvent } from "./modify-event.js";
-import { addDate } from "./form-function/add-date.js";
+import { addDate } from "../general-utils/add-date.js";
 import { createHeader } from "./create-header-tabel.js";
-import { getDates } from "./general-utils/get-dates.js";
+import { getDates } from "../general-utils/get-dates.js";
 import { createBody } from "./create-body-tabel.js";
 import { deleteEvent } from "./delete-event.js";
 import { createFormAttendances } from "./create-form-attendances.js";
