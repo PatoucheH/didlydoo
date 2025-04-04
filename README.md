@@ -72,6 +72,7 @@ https://github.com/PatoucheH/didlydoo/
             |       └─► header.js
             |
             └─► index-function/
+                    ├─► best-possible-date.js
                     └─► get-all-infos.js
 
 ```
