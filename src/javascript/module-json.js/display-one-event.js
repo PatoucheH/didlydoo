@@ -157,49 +157,25 @@ export async function displayEventById(id) {
   container.appendChild(form);
   let submitForm = document.getElementById("new-attendance-submit");
   submitForm.addEventListener("click", (e) => {
-    // e.preventDefault();
-    let newParticipantObj = {};
-    let groupes = new Set();
-    document.querySelectorAll('input[type="radio"]').forEach((radio) => {
-      groupes.add(radio.name);
+    e.preventDefault();
+    const input = document.getElementById("input-new-attendee");
+    const divParticipants = document.getElementById("attendance-grid");
+    const participants = divParticipants.querySelectorAll(".participant");
+    let participantsArray = [];
+    participants.forEach((el) => {
+      participantsArray.push(el.innerHTML);
     });
-    let datesArray = [];
-    groupes.forEach((name) => {
-      let selections = {};
-      let selected = document.querySelector(`input[name="${name}"]:checked`);
-      if (selected) {
-        selections["date"] = name;
-        selections["available"] = selected.value === "true" ? true : false;
+    console.log(participantsArray);
+    console.log(id);
+    
+    
 
-        datesArray.push(selections);
-      }
-    });
-    newParticipantObj["name"] = input.value;
-    newParticipantObj["dates"] = datesArray;
-    console.log(newParticipantObj);
-    //POST to DB
-    try {
-      fetch(`http://localhost:3000/api/events/${id}/attend`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newParticipantObj),
-      })
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          console.log("Succes:", data);
-
-          localStorage.setItem("event", data.id);
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
-    } catch (e) {
-      console.log(e);
+    if (!participantsArray.includes(input.value)) {
+      attendancesFormEvent(id, "POST");
+    } else {
+      attendancesFormEvent(id, "PATCH");
     }
+    location.href = "./event.html";
   });
 
   const divAddDate = document.createElement("div");
