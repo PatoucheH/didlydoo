@@ -114,6 +114,7 @@ export async function displayEventById(id) {
 
   //modify attendances
   let form = document.createElement("form");
+  form.id = "form-attendance";
   form.action = "./event.html";
   let newAttendance = document.createElement("div");
   newAttendance.id = "attendance-input";
@@ -193,6 +194,7 @@ export async function displayEventById(id) {
   });
 
   const divAddDate = document.createElement("div");
+  divAddDate.id = "div-add-date";
   divAddDate.innerHTML = `<input type="date" class="add-date-input">`;
   const addDateEvent = document.createElement("button");
   addDateEvent.textContent = "Add a date";
