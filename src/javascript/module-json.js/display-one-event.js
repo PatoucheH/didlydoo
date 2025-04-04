@@ -147,21 +147,22 @@ export async function displayEventById(id) {
   container.appendChild(form);
   let submitForm = document.getElementById("new-attendance-submit");
   submitForm.addEventListener("click", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     let newParticipantObj = {};
     let groupes = new Set();
     document.querySelectorAll('input[type="radio"]').forEach((radio) => {
       groupes.add(radio.name);
     });
     let datesArray = [];
-    groupes.forEach((name) => {
-      let selections = {};
-      let selected = document.querySelector(`input[name="${name}"]:checked`);
-      if (selected) {
-        selections["date"] = name;
-        selections["available"] = selected.value;
-        datesArray.push(selections);
-      }
+    groupes.forEach(name => {
+        let selections = {};
+        let selected = document.querySelector(`input[name="${name}"]:checked`);
+        if(selected) {
+          selections["date"] = name;
+          selections["available"] = (selected.value === "true")? true: false;
+          
+          datesArray.push(selections);
+        }
     });
     newParticipantObj["name"] = input.value;
     newParticipantObj["dates"] = datesArray;
@@ -184,5 +185,31 @@ export async function displayEventById(id) {
     objDate.dates = dateToAdd;
     addDate(id, objDate);
     location.reload();
+    console.log(dateToAdd);
+    addDate(id, dateToAdd);
   });
+    
+    //POST to DB
+    try {
+      fetch(`http://localhost:3000/api/events/${id}/attend`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newParticipantObj),
+      })
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log("Succes:", data);
+  
+          localStorage.setItem("event", data.id);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    } catch (e) {
+      console.log(e);
+    }
 }
