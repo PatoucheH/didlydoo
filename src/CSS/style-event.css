@@ -50,7 +50,6 @@ button:hover {
   box-shadow: 3px 5px 4px rgb(90, 90, 90);
 }
 
-<<<<<<< HEAD
 #event {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -77,9 +76,7 @@ button:hover {
 }
 
 #add-date-btn {
-=======
 #new-attendance-submit {
->>>>>>> 024938be570ed5cbf480762d96fd0e1cbf7b6d85
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
   font-weight: 100;
