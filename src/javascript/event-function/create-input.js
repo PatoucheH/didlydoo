@@ -1,7 +1,7 @@
 /**
  * 
- * @param {div} div div to add the input div
- * Create an input div with the information for the event to modify
+ * @param {HTMLElement} div div to add the input div
+ * @description Create an input div with the information for the event to modify
  */
 export function createInputDiv(div) {
   const divToAdd = document.createElement("div");

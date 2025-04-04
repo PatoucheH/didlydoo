@@ -1,8 +1,8 @@
 /**
  * 
- * @param {str} id of the event 
- * @param {str} type POST or PATCH to choose if we modify or create
- * change or create a new name/attendances
+ * @param {string} id of the event 
+ * @param {string} type POST or PATCH to choose if we modify or create
+ * @description change or create a new name/attendances
  */
 export function attendancesFormEvent(id, type) {
     let newParticipantObj = {};
