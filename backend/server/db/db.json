@@ -250,6 +250,19 @@
             "available": false
           }
         ]
+      },
+      {
+        "name": "hugo",
+        "dates": [
+          {
+            "date": "0555-05-05",
+            "available": true
+          },
+          {
+            "date": "2022-02-10",
+            "available": false
+          }
+        ]
       }
     ],
     "created_at": "2021-11-13T14:00",
