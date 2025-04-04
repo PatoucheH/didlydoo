@@ -174,14 +174,15 @@ export async function displayEventById(id) {
   addDateEvent.textContent = "Add a date";
   addDateEvent.id = "add-date-btn";
   divAddDate.appendChild(addDateEvent);
+  const objDate = {};
   const dateToAdd = [];
 
   container.appendChild(divAddDate);
   addDateEvent.addEventListener("click", (e) => {
     const inputDateToAdd = document.querySelector(".add-date-input");
     dateToAdd.push(inputDateToAdd.value);
-    console.log(dateToAdd);
-    addDate(id, dateToAdd);
-    
+    objDate.dates = dateToAdd;
+    addDate(id, objDate);
+    location.reload();
   });
 }
