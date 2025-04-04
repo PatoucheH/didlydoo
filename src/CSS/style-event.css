@@ -36,7 +36,7 @@ body {
   gap: 10px;
 }
 
-#form-attendance {
+#form {
   position: relative;
   margin: 0 auto;
   grid-row: 4 / 5;
@@ -115,7 +115,7 @@ body {
 }
 
 #attendance-grid {
-  max-width:90em;
+  max-width: 90em;
   max-height: 20em;
   padding: 25px;
   overflow-y: auto;

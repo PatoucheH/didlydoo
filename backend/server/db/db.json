@@ -29,19 +29,6 @@
     ]
   },
   {
-    "id": "7c8d90414e87",
-    "name": "aaa",
-    "author": "aaa",
-    "description": "aaa",
-    "dates": [
-      "0111-11-11"
-    ],
-    "created_at": "2025-04-04T08:35:52.319Z",
-    "num_modification": 0,
-    "last_modification": "2025-04-04T08:35:52.319Z",
-    "attendees": []
-  },
-  {
     "id": "f5b6564b5dc4",
     "name": "hugop",
     "description": "je m'aime",
@@ -254,6 +241,15 @@
       {
         "name": "uuuuuuuuuuuuuuuuuuu",
         "dates": []
+      },
+      {
+        "name": "uuuuuuuu",
+        "dates": [
+          {
+            "date": "0555-05-05",
+            "available": false
+          }
+        ]
       }
     ],
     "created_at": "2021-11-13T14:00",

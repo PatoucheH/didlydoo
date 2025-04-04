@@ -9,7 +9,7 @@ import { createFormAttendances } from "./create-form-attendances.js";
 import { attendancesFormEvent } from "./attendance-form-event.js";
 
 export async function displayEventById(idEvent) {
-  let id = idEvent
+  let id = idEvent;
   let event = await getInfo(`/api/events/${id}`);
   let container = document.getElementById("event");
   container.innerHTML = `
@@ -23,7 +23,7 @@ export async function displayEventById(idEvent) {
 
   let tabel = document.getElementById("attendance-grid");
   let dates = event.dates;
-  
+
   let datesArray = getDates(dates);
   createHeader(datesArray, tabel);
 
@@ -61,9 +61,24 @@ export async function displayEventById(idEvent) {
   createFormAttendances(datesArray, container);
 
   let submitForm = document.getElementById("new-attendance-submit");
-  submitForm.addEventListener("click", () => {
-    attendancesFormEvent(id);
+  submitForm.addEventListener("click", (e) => {
+    e.preventDefault();
+    const input = document.getElementById("input-new-attendee");
+    const divParticipants = document.getElementById("attendance-grid");
+    const participants = divParticipants.querySelectorAll(".participant");
+    let participantsArray = [];
+    participants.forEach((el) => {
+      participantsArray.push(el.innerHTML);
+    });
+
+    if (participantsArray.includes(input.value)) {
+      attendancesFormEvent(id, "POST");
+    } else {
+      attendancesFormEvent(id, "PATCH");
+    }
+    location.href = "./event.html";
   });
+
   const divAddDate = document.createElement("div");
   divAddDate.id = "div-add-date";
   divAddDate.innerHTML = `<input type="date" class="add-date-input">`;
