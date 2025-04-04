@@ -1,6 +1,6 @@
 /**
  * 
- * @param {str} id the id of the event 
+ * @param {string} id the id of the event 
  * @param {array} arrayDate An array with all the date to post 
  *  function to add the date to the db 
  */

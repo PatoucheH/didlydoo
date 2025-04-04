@@ -1,7 +1,7 @@
 /**
  * 
- * @param {str} id Of the event choose
- * Delete the event
+ * @param {string} id Of the event choose
+ * @description Delete the event
  */
 export function deleteEvent(id) {
     fetch(`http://localhost:3000/api/events/${id}/`, {

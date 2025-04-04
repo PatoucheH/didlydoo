@@ -1,6 +1,6 @@
 /**
  * 
- * @param {str} route route to get the infos with the fetch 
+ * @param {string} route route to get the infos with the fetch 
  * @returns All the data get with the fetch
  */
 

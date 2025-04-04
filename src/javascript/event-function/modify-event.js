@@ -1,7 +1,7 @@
 /**
  * 
- * @param {str} id of the event to modify
- * Modify the name author or description of an event
+ * @param {string} id of the event to modify
+ * @description Modify the name author or description of an event
  */
 export function modifyEvent(id) {
     const modifyBtn = document.getElementById("btn-modify");
