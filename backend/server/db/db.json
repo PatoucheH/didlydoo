@@ -1,5 +1,38 @@
 [
   {
+    "id": "c457114834c3",
+    "name": "boire un verre",
+    "author": "tous",
+    "description": "boire un verre entre amis",
+    "dates": [
+      "2025-04-10",
+      "2025-04-11",
+      "2025-04-12"
+    ],
+    "created_at": "2025-04-04T13:20:56.165Z",
+    "num_modification": 0,
+    "last_modification": "2025-04-04T13:20:56.165Z",
+    "attendees": [
+      {
+        "name": "hugo",
+        "dates": [
+          {
+            "date": "2025-04-10",
+            "available": true
+          },
+          {
+            "date": "2025-04-11",
+            "available": false
+          },
+          {
+            "date": "2025-04-12",
+            "available": true
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "21e30089d876",
     "name": "présenter le projet ",
     "author": "Hugo Stephan Valentin",
@@ -11,39 +44,6 @@
     "num_modification": 0,
     "last_modification": "2025-04-04T13:05:58.714Z",
     "attendees": []
-  },
-  {
-    "id": "a53864d70ea2",
-    "name": "zf",
-    "author": "dzfz",
-    "description": "zfz",
-    "dates": [
-      "2025-05-03",
-      "2025-04-16",
-      "2025-04-07"
-    ],
-    "created_at": "2025-04-04T08:52:00.735Z",
-    "num_modification": 0,
-    "last_modification": "2025-04-04T08:52:00.735Z",
-    "attendees": [
-      {
-        "name": "val",
-        "dates": [
-          {
-            "date": "2025-04-07",
-            "available": true
-          },
-          {
-            "date": "2025-04-16",
-            "available": true
-          }
-        ]
-      },
-      {
-        "name": "inox",
-        "dates": []
-      }
-    ]
   },
   {
     "id": "f5b6564b5dc4",
