@@ -10,8 +10,8 @@ export async function displayEventById(id) {
       <h2>${event.name}</h2>
       <p>${event.description}</p>
       <p>by ${event.author}</p>
-      <div id="attendance-grid"></div>
     </section>
+    <div id="attendance-grid"></div>
   `;
 
   let tabel = document.getElementById("attendance-grid");
@@ -24,9 +24,6 @@ export async function displayEventById(id) {
   // create header dates, determines the number of columns grid
   let dates = event.dates;
   tabel.style.gridTemplateColumns = `auto repeat(${dates.length}, 1fr)`;
-  tabel.style.width = "900px";
-  tabel.style.position = "relative";
-  tabel.style.margin = "auto";
   let datesSave = [];
   dates.forEach((element) => {
     let header = document.createElement("div");
@@ -122,16 +119,6 @@ export async function displayEventById(id) {
   newAttendance.style.gridTemplateColumns = `auto repeat(${dates.length}, 1fr)`;
   form.appendChild(newAttendance);
 
-  let first = document.createElement("div");
-  first.classList.add("header");
-  newAttendance.appendChild(first);
-  datesSave.forEach((date) => {
-    let header = document.createElement("div");
-    header.classList.add("header");
-    header.textContent = date;
-    newAttendance.appendChild(header);
-  })
-
   let newParticipant = document.createElement("div");
   newParticipant.classList.add("participant");
   let input = document.createElement("input");
@@ -202,6 +189,7 @@ export async function displayEventById(id) {
       console.log(e);
     }
   });
+
   const divAddDate = document.createElement("div");
   divAddDate.id = "div-add-date";
   divAddDate.innerHTML = `<input type="date" class="add-date-input">`;
