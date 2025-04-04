@@ -1,6 +1,5 @@
 import { createHeader } from "./general-utils/header.js";
-import { getInputValue } from "./form-function/get-input-value.js";
-import { postNewEvent } from "./form-function/post-new-event.js";
+import { errorOrCreateEvent } from "./form-function/create-event-or-display-error.js";
 
 // button to add a input date
 const addDate = document.getElementById("add-date");
@@ -24,4 +23,6 @@ addDate.addEventListener("click", (e) => {
 
 const formBtn = document.getElementById("submit");
 
-formBtn.addEventListener("click", (e) => postNewEvent(getInputValue()));
+formBtn.addEventListener("click", (e) => {
+  errorOrCreateEvent();
+});
