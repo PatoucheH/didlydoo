@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {input} input Get the input to check it 
+ * Display an error if the input is not avilable
+ */
 export function displayError(input) {
   const textError = document.createElement("p");
   textError.style.color = "red";

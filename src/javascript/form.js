@@ -20,9 +20,14 @@ addDate.addEventListener("click", (e) => {
         <input type="date" class="date" required />`
   );
 });
-
+/**
+ * Select the button to validate the form 
+ */
 const formBtn = document.getElementById("submit");
 
+/**
+ * When the form is send create an error if the inputs are not available and send the form if the input are available
+ */
 formBtn.addEventListener("click", (e) => {
   errorOrCreateEvent();
 });

@@ -8,6 +8,11 @@ import { deleteEvent } from "./delete-event.js";
 import { createFormAttendances } from "./create-form-attendances.js";
 import { attendancesFormEvent } from "./attendance-form-event.js";
 
+/**
+ * 
+ * @param {str} idEvent Id of the event to display
+ * Display all the informations of an event choose by the id enter 
+ */
 export async function displayEventById(idEvent) {
   let id = idEvent;
   let event = await getInfo(`/api/events/${id}`);

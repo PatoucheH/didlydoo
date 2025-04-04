@@ -1,5 +1,9 @@
 import { displayError } from "./display-error.js";
 
+/**
+ * Create An error if the inputs are not available or create an event if all the inputs are good
+ * @returns NOTHING
+ */
 export function errorOrCreateEvent() {
   const name = document.getElementById("name-event");
   const author = document.getElementById("author-event");

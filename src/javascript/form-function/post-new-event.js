@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {obj} data object with all the data of an event to create
+ * Send the event to the db to add it 
+ */
 export function postNewEvent (data){
     try {
         fetch("http://localhost:3000/api/events/", {

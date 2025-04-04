@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {str} id of the event to modify
+ * Modify the name author or description of an event
+ */
 export function modifyEvent(id) {
     const modifyBtn = document.getElementById("btn-modify");
     const name = document.getElementById("input-name");
