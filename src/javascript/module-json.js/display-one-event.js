@@ -121,6 +121,16 @@ export async function displayEventById(id) {
   newAttendance.style.gridTemplateColumns = `auto repeat(${dates.length}, 1fr)`;
   form.appendChild(newAttendance);
 
+  let first = document.createElement("div");
+  first.classList.add("header");
+  newAttendance.appendChild(first);
+  datesSave.forEach((date) => {
+    let header = document.createElement("div");
+    header.classList.add("header");
+    header.textContent = date;
+    newAttendance.appendChild(header);
+  })
+
   let newParticipant = document.createElement("div");
   newParticipant.classList.add("participant");
   let input = document.createElement("input");
