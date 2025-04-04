@@ -147,7 +147,7 @@ export async function displayEventById(id) {
   container.appendChild(form);
   let submitForm = document.getElementById("new-attendance-submit");
   submitForm.addEventListener("click", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     let newParticipantObj = {};
     let groupes = new Set(); 
     document.querySelectorAll('input[type="radio"]').forEach(radio => {
@@ -159,7 +159,8 @@ export async function displayEventById(id) {
         let selected = document.querySelector(`input[name="${name}"]:checked`);
         if(selected) {
           selections["date"] = name;
-          selections["available"] = selected.value;
+          selections["available"] = (selected.value === "true")? true: false;
+          
           datesArray.push(selections);
         }
     });
@@ -167,5 +168,28 @@ export async function displayEventById(id) {
     newParticipantObj["dates"] = datesArray;
     console.log(newParticipantObj);
     
+    //POST to DB
+    try {
+      fetch(`http://localhost:3000/api/events/${id}/attend`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newParticipantObj),
+      })
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log("Succes:", data);
+  
+          localStorage.setItem("event", data.id);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    } catch (e) {
+      console.log(e);
+    }
 });
 }
