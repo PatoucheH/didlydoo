@@ -17,8 +17,8 @@ export async function displayEventById(idEvent) {
       <h2>${event.name}</h2>
       <p>${event.description}</p>
       <p>by ${event.author}</p>
-      <div id="attendance-grid"></div>
     </section>
+    <div id="attendance-grid"></div>
   `;
 
   let tabel = document.getElementById("attendance-grid");
