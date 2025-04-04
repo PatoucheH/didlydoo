@@ -1,5 +1,6 @@
 import { getInfo } from "./get-json-info.js";
 import { modifyEvent } from "./modify-event.js";
+import { addDate } from "./add-date.js";
 
 export async function displayEventById(id) {
   let event = await getInfo(`/api/events/${id}`);
@@ -95,7 +96,7 @@ export async function displayEventById(id) {
   const modifyBtn = document.createElement("button");
   modifyBtn.id = "modify-btn";
   modifyBtn.textContent = "Update Event";
-  container.appendChild(modifyBtn)
+  container.appendChild(modifyBtn);
   modifyBtn.addEventListener("click", (e) => {
     const divInput = document.getElementById("div-input");
     if (divInput.style.display === "none") {
@@ -110,7 +111,6 @@ export async function displayEventById(id) {
     modifyEvent(id);
     location.href = "./event.html";
   });
-
 
   //modify attendances
   let form = document.createElement("form");
@@ -131,14 +131,14 @@ export async function displayEventById(id) {
 
   datesSave.forEach((date) => {
     let availability = document.createElement("div");
-    availability.id = `${date}`
+    availability.id = `${date}`;
     availability.classList.add("availability");
     availability.innerHTML = `<input type="radio" id="${date}-true" name="${date}" value="true">
                               <label for="${date}-true"><i class="fa-solid fa-thumbs-up"></i></label>
                               <input type="radio" id="${date}-false" name="${date}" value="false">
-                              <label for="${date}-false"><i class="fa-solid fa-thumbs-down"></i></label>`
+                              <label for="${date}-false"><i class="fa-solid fa-thumbs-down"></i></label>`;
     newAttendance.appendChild(availability);
-  })
+  });
   let submit = document.createElement("input");
   submit.type = "submit";
   submit.id = "new-attendance-submit";
@@ -149,9 +149,9 @@ export async function displayEventById(id) {
   submitForm.addEventListener("click", (e) => {
     // e.preventDefault();
     let newParticipantObj = {};
-    let groupes = new Set(); 
-    document.querySelectorAll('input[type="radio"]').forEach(radio => {
-        groupes.add(radio.name);
+    let groupes = new Set();
+    document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+      groupes.add(radio.name);
     });
     let datesArray = [];
     groupes.forEach(name => {
@@ -167,6 +167,22 @@ export async function displayEventById(id) {
     newParticipantObj["name"] = input.value;
     newParticipantObj["dates"] = datesArray;
     console.log(newParticipantObj);
+  });
+
+  const divAddDate = document.createElement("div");
+  divAddDate.innerHTML = `<input type="date" class="add-date-input">`;
+  const addDateEvent = document.createElement("button");
+  addDateEvent.textContent = "Add a date";
+  addDateEvent.id = "add-date-btn";
+  divAddDate.appendChild(addDateEvent);
+  const dateToAdd = [];
+
+  container.appendChild(divAddDate);
+  addDateEvent.addEventListener("click", (e) => {
+    const inputDateToAdd = document.querySelector(".add-date-input");
+    dateToAdd.push(inputDateToAdd.value);
+    console.log(dateToAdd);
+    addDate(id, dateToAdd);
     
     //POST to DB
     try {
