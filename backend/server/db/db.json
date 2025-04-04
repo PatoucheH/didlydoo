@@ -1,5 +1,18 @@
 [
   {
+    "id": "6df998b5b5b6",
+    "name": "eee",
+    "author": "eeee",
+    "description": "eee",
+    "dates": [
+      "0022-02-22"
+    ],
+    "created_at": "2025-04-04T07:41:21.169Z",
+    "num_modification": 0,
+    "last_modification": "2025-04-04T07:41:21.169Z",
+    "attendees": []
+  },
+  {
     "id": "f5b6564b5dc4",
     "name": "hugop",
     "description": "je m'aime",
@@ -132,6 +145,27 @@
       },
       {
         "name": "val",
+        "dates": [
+          {
+            "date": "0555-05-05",
+            "available": true
+          },
+          {
+            "date": "2022-01-10",
+            "available": false
+          },
+          {
+            "date": "2022-02-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-10",
+            "available": false
+          }
+        ]
+      },
+      {
+        "name": "michou",
         "dates": [
           {
             "date": "0555-05-05",
