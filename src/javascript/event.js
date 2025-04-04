@@ -1,5 +1,5 @@
-import { displayEventById } from "./module-json.js/display-one-event.js";
-import { createHeader } from "./module-json.js/header.js";
+import { displayEventById } from "./event-function/display-one-event.js";
+import { createHeader } from "./general-utils/header.js";
 
 createHeader();
 

@@ -1,6 +1,6 @@
 /** @description - Import the .json data objects */
-import { getAllInfos } from "./module-json.js/get-all-infos.js";
-import { getInfo } from "./module-json.js/get-json-info.js";
+import { getAllInfos } from "./index-function/get-all-infos.js";
+import { getInfo } from "./general-utils/get-json-info.js";
 
 /** @description - Import the header */
 import { createHeader } from "./module-json.js/header.js";
