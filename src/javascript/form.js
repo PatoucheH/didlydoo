@@ -1,6 +1,6 @@
-import { createHeader } from "./module-json.js/header.js";
-import { getInputValue } from "./module-json.js/get-input-value.js";
-import { postNewEvent } from "./module-json.js/post-new-event.js";
+import { createHeader } from "./general-utils/header.js";
+import { getInputValue } from "./form-function/get-input-value.js";
+import { postNewEvent } from "./form-function/post-new-event.js";
 
 // button to add a input date
 const addDate = document.getElementById("add-date");
