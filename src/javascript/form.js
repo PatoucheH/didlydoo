@@ -1,5 +1,6 @@
 import { createHeader } from "./module-json.js/header.js";
 import { getInputValue } from "./module-json.js/get-input-value.js";
+import { postNewEvent } from "./module-json.js/post-new-event.js";
 
 // button to add a input date
 const addDate = document.getElementById("add-date");
@@ -23,27 +24,4 @@ addDate.addEventListener("click", (e) => {
 
 const formBtn = document.getElementById("submit");
 
-formBtn.addEventListener("click", (e) => {
-  try {
-    fetch("http://localhost:3000/api/events/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(getInputValue()),
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Succes:", data);
-
-        localStorage.setItem("event", data.id);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  } catch (e) {
-    console.log(e);
-  }
-});
+formBtn.addEventListener("click", (e) => postNewEvent(getInputValue()));
