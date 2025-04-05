@@ -29,14 +29,14 @@ export function attendancesFormEvent(id, type) {
     });
     /** @var {HTMLElement} input - Select the input field for the new attendee name **/
     let input = document.getElementById("input-new-attendee");
-    //  Debugging
+    // Debugging
     console.log(input.value);
-    /** @description - Add name and date in newParticipantObj object*/
+    /** @description - Add name and date in newParticipantObj object */
     newParticipantObj["name"] = input.value;
     newParticipantObj["dates"] = datesArr;
     // Debugging
     console.log(newParticipantObj);
-    //POST to DB
+    /** @description - POST to DB */
     try {
       fetch(`http://localhost:3000/api/events/${id}/attend`, {
         method: type,
