@@ -13,7 +13,7 @@ export function attendancesFormEvent(id, type) {
     document.querySelectorAll('input[type="radio"]').forEach((radio) => {
       groupes.add(radio.name);
     });
-    /** @var {Array} datesArr - Initialize a variable contains an empty array*/
+    /** @var {Array<string>} datesArr - Initialize a variable contains an empty array*/
     let datesArr = [];
     groupes.forEach((name) => { 
       /** @var {Object} selections - Initialize a variable contains an empty object*/

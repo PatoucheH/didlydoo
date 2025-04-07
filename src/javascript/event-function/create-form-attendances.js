@@ -1,6 +1,6 @@
 /**
  * 
- * @param {Array[string]} dates - receive an array of all dates event
+ * @param {Array<string>} dates - receive an array of all dates event
  * @param {HTMLElement} container - container that receive form
  * @description - create form to add new participant to event
  */
