@@ -1,3 +1,5 @@
+import { bestPossibleDate } from "./best-possible-date";
+
 /**
  *
  * @param {JSON[Object]} data - Array of all events objects
@@ -24,18 +26,23 @@ export function getAllInfos(data) {
  * @param {string} desc - Event description
  * @param {string} id - Event ID
  */
-function createEventCard(name, date, desc, id) {
+async function createEventCard(name, date, desc, id) {
   const div = document.getElementById("container"); // Target the div container
   const newSection = document.createElement("section"); // Create new <section>
   newSection.id = "event"; // Add an id "event"
   // Add event contains in the <section>
   const newDate = date.split("T")[0];
 
+  //best possible date(s)
+  let bestDates = await bestPossibleDate(id);
+ 
   newSection.innerHTML = `
             <a href="./src/HTML/event.html" id="${id}" class="card">
             <h3>${name}</h3>
             <h6 class="desc">${desc}</h6>
             <p>created date : ${newDate}</p>
+            <p> best possible date(s) : <br>
+             ${bestDates.length > 0 ? bestDates.join("<br>") : "no best date(s) found"}</p>
             </a>
         `;
   div.appendChild(newSection); // Add <section> in <div> container

@@ -6,7 +6,6 @@ import { getInfo } from "../general-utils/get-json-info.js";
  */
 export async function bestPossibleDate(id) {
     let attendances = await getInfo("/api/attendees/");
-    console.log(attendances);
     
     let datesWithParticipantsPresence = {};
     let datesWithValue = [];
@@ -27,5 +26,17 @@ export async function bestPossibleDate(id) {
             }
         });
       });
-    console.log(datesWithParticipantsPresence);
+    //return best date(s)
+    let max = 0;
+    let bestDate = [];
+    Object.entries(datesWithParticipantsPresence).forEach(([date, attendances]) => {
+        if(attendances === max) {
+            bestDate.push(date);
+        }  else if (attendances > max) {
+            bestDate = [];
+            max = attendances;
+            bestDate.push(date);
+        }  
+    })
+    return bestDate;
 }
