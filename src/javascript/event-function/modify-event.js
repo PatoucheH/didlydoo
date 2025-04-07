@@ -4,23 +4,33 @@
  * @description Modify the name author or description of an event
  */
 export function modifyEvent(id) {
-    /** @const {HTMLElement} name - Get element who has input-name id*/
-    const name = document.getElementById("input-name");
-
-    /** @const {HTMLElement} author - Get element who has input-author id*/
-    const author = document.getElementById("input-author");
-
-    /** @const {HTMLElement} desc - Get element who has input-desc id*/
-    const desc = document.getElementById("input-desc");
-
     /** @var {Array} inputObject - Create uan empty array */
     let inputObject = {};
-    /** @description - Add name, author and description to inputObject */
+
+    /**
+     * 
+     * @const {HTMLElement} name - Get element who has input-name id
+     * @description - Add name, author and description to inputObject
+     */
+    const name = document.getElementById("input-name");
     if (name.value !== "") inputObject.name = name.value;
-    /** @description - Add author to inputObject */
+
+    /**
+     *
+     * @const {HTMLElement} author - Get element who has input-author id
+     * @description - Add author to inputObject
+     */
+    const author = document.getElementById("input-author");
     if (author.value !== "") inputObject.author = author.value;
-    /** @description - Add description to inputObject */
+
+    /**
+     * 
+     * @const {HTMLElement} desc - Get element who has input-desc id
+     * @description - Add description to inputObject
+     */
+    const desc = document.getElementById("input-desc");
     if (desc.value !== "") inputObject.description = desc.value;
+    
     // Debugging
     console.log(inputObject);
   

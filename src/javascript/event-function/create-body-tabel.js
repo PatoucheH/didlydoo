@@ -21,6 +21,7 @@ export function createBody(attendances, dates, tabel, id) {
       participant.textContent = attendance.name;
       /** @description - add participant element in tabel element*/
       tabel.appendChild(participant);
+
       /** @var {object} availabilities - create new object with all availabilities for the participant */
       let availabilities = {};
       /** @description - add availibilities for participant */
@@ -34,6 +35,7 @@ export function createBody(attendances, dates, tabel, id) {
         let availability = document.createElement("div");
         /** @description - add class for the availability div */
         availability.classList.add("availability");
+        
         /** @description - condition for create a defaut content when the date is undefined */
         if (availabilities[date] !== undefined) {
           /** @description - add contains to avaiability */

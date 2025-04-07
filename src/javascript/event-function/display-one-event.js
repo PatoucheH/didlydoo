@@ -86,6 +86,7 @@ export async function displayEventById(idEvent) {
 
   /** @const {HTMLElement} acceptModify - Get the element with id="accept-modify-btn" */
   const acceptModify = document.getElementById("accept-modify-btn");
+
   /** @description - Add an event listener to acceptModify element */
   acceptModify.addEventListener("click", (e) => {
     /** @description - Call modifyEvent function with idlik params */
@@ -98,22 +99,30 @@ export async function displayEventById(idEvent) {
   createFormAttendances(datesArray, container);
   /** @var {HTMLElement} submitForm - Get the element with id="new-attendance-submit" */
   let submitForm = document.getElementById("new-attendance-submit");
+
+  /** @description - Add an event listener to submitForm element */
   submitForm.addEventListener("click", (e) => {
-    /** @description - Prevent the default action of the event */
+    /** @description - Prevent to reload html page */
     e.preventDefault();
-    /** @const {HTMLElement} input - Get the element with id="input-new-attendee" */
-    const input = document.getElementById("input-new-attendee");
-    /** @const {HTMLElement} divParticipants - Get the element with id="attendance-grid" */
-    const divParticipants = document.getElementById("attendance-grid");
-    /** @const {HTMLElement} participants - Get all elements content participant class */
-    const participants = divParticipants.querySelectorAll(".participant");
+
     /** @var {Array<string>} participantsArray - Create an empty array */
     let participantsArray = [];
+
+    /** @const {HTMLElement} input - Get the element with id="input-new-attendee" */
+    const input = document.getElementById("input-new-attendee");
+
+    /** @const {HTMLElement} divParticipants - Get the element with id="attendance-grid" */
+    const divParticipants = document.getElementById("attendance-grid");
+
+    /** @const {HTMLElement} participants - Get all elements content participant class */
+    const participants = divParticipants.querySelectorAll(".participant");
+
     /** @description - For each elements of participants do.. */
     participants.forEach((el) => {
       /** @description - Add the innerHTML of each element to participantsArray */
       participantsArray.push(el.innerHTML);
     });
+
     // Debugging
     console.log(participantsArray);
     console.log(id);
@@ -136,6 +145,7 @@ export async function displayEventById(idEvent) {
   divAddDate.id = "div-add-date";
   /** @description - Add content of divAddDate element */
   divAddDate.innerHTML = `<input type="date" class="add-date-input">`;
+
   /** @const {HTMLElement} addDateEvent - Create element <button> */
   const addDateEvent = document.createElement("button");
   /** @description - Add content of addDateEvent element */
@@ -144,25 +154,35 @@ export async function displayEventById(idEvent) {
   addDateEvent.id = "add-date-btn";
   /** @description - Add addDateEvent element to divAddDate element */
   divAddDate.appendChild(addDateEvent);
+
   /** @const {Object} objDate - Create an empty object */
   const objDate = {};
+
   /** @const {Array<string>} dateToAdd - Create an empty array */
   const dateToAdd = [];
+
   /** @description - Add divAddDate element to container element */
   container.appendChild(divAddDate);
+
   /** @description - Add an event listener to addDateEvent element */
   addDateEvent.addEventListener("click", (e) => {
     /** @const {HTMLElement} inputDateToAdd - Get all elements have add-date-input like classlist */
     const inputDateToAdd = document.querySelector(".add-date-input");
+    /** @description - Add inputDateToAdd.value in dateToAdd array */
     dateToAdd.push(inputDateToAdd.value);
+
     /** @description - Add dateToAdd to objDate object */
     objDate.dates = dateToAdd;
+
     /** @description - Call addDate function with id & objDate like params */
     addDate(id, objDate);
+
     /** @description - Redirect to event.html page */
     location.reload();
+
     // Debugging
     console.log(dateToAdd);
+    
     /** @description - Call addDate function with id & dateToAdd like params */
     addDate(id, dateToAdd);
   });

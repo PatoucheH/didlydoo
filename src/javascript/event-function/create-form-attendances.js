@@ -11,6 +11,7 @@ export function createFormAttendances(dates, container) {
     form.id = "form";
     /** @description - Add an action for <form> element */
     form.action = "./event.html";
+
     /** @var {HTMLElement} newAttendance - Create an element <div> */
     let newAttendance = document.createElement("div");
     /** @description - Add an id for <div> element */
@@ -21,12 +22,14 @@ export function createFormAttendances(dates, container) {
     newAttendance.style.gridTemplateColumns = `auto repeat(${dates.length}, 1fr)`;
     /** @description - Add newAttendance element in from element */
     form.appendChild(newAttendance);
+
     /** @var {HTMLElement} first - Create an element <div> */
     let first = document.createElement("div");
     /** @description - Add class to first element */
     first.classList.add("header");
     /** @description - Add first element to newAttendance element */
     newAttendance.appendChild(first);
+
     /** @description - For each elements of dates do.. */
     dates.forEach((date) => {
         /** @var {HTMLElement} header - Create an element <div> */
@@ -43,6 +46,7 @@ export function createFormAttendances(dates, container) {
     let newParticipant = document.createElement("div");
     /** @description - Add classList to newParticipant element */
     newParticipant.classList.add("participant");
+
     /** @var {HTMLElement} input - Create an element <input> */
     let input = document.createElement("input");
     /** @description - Add an id for input element */
@@ -51,6 +55,7 @@ export function createFormAttendances(dates, container) {
     input.type = "text";
     /** @description - Add placeholder="Name" for input element */
     input.placeholder = "Name";
+
     /** @description - Add input element to newParticipant element */
     newParticipant.appendChild(input);
     /** @description - Add newParticipant element to newAttendance element */
@@ -74,6 +79,7 @@ export function createFormAttendances(dates, container) {
         /** @description - Add availability element to newAttendance element */
         newAttendance.appendChild(availability);
     });
+
     /** @var {HTMLElement} submit - Create an element <input> */
     let submit = document.createElement("input");
     /** @description - Add type="submit" for submit element */
@@ -82,6 +88,7 @@ export function createFormAttendances(dates, container) {
     submit.id = "new-attendance-submit";
     /** @description - Add value="Submit" for submit element */
     submit.value = "Submit";
+    
     /** @description - Add submit element to form element */
     form.appendChild(submit);
     /** @description - Add form element to container element */

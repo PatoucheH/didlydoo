@@ -65,7 +65,7 @@ export function errorOrCreateEvent() {
   }
 
 
-    /** @description - Verify if name, author and desc value are not empty and length < 256 */
+  /** @description - Verify if name, author and desc value are not empty and length < 256 */
   if (
     name.value !== "" &&
     name.value.length < 256 &&

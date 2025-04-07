@@ -1,33 +1,28 @@
+/** @description - Import the fucntions we needed for start form module */
 import { createHeader } from "./general-utils/header.js";
 import { errorOrCreateEvent } from "./form-function/create-event-or-display-error.js";
 
-// button to add a input date
+/** @const {HTMLElement} addDate - Get element who has add-date like id */
 const addDate = document.getElementById("add-date");
 
-// form for an event
-const form = document.getElementById("my-form");
-
+/** @description - Call createHeader function */
 createHeader();
 
-/**
- * @description -- Add an input date to add another date to the event
- */
-
+/** @description - Add an event listener to addDate element */
 addDate.addEventListener("click", (e) => {
+  /** @description - Add adjacent content for addDate element */
   addDate.insertAdjacentHTML(
     "beforebegin",
     `<label for="date-event">Enter the date : </label>
         <input type="date" class="date" required />`
   );
 });
-/**
- * Select the button to validate the form 
- */
+
+/** @const {HTMLElement} formBtn - Get element who has submit like id */
 const formBtn = document.getElementById("submit");
 
-/**
- * When the form is send create an error if the inputs are not available and send the form if the input are available
- */
+/** @description - Add an event listener to formBtn element */
 formBtn.addEventListener("click", (e) => {
+  /** @description - Call errorOrCreateEvent() function */
   errorOrCreateEvent();
 });
