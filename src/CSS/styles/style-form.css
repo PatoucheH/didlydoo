@@ -2,6 +2,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #3a3a3a;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 form {
@@ -35,8 +38,8 @@ input:focus {
   font-optical-sizing: auto;
   font-weight: 100;
   font-style: normal;
-  width: 110px;
-  height: 50px;
+  width: 120px;
+  height: 70px;
   position: relative;
   margin: auto;
   grid-row: 1 / 2;
@@ -50,6 +53,10 @@ input:focus {
   border-radius: 5px;
   box-shadow: 4px 10px 10px rgb(90, 90, 90);
   border: 0px solid rgb(0, 0, 0);
+  background-color: rgba(92, 92, 92, 0.70);
+  color: rgb(216, 216, 216);
+  font-weight: 500;
+  font-size: 16px;
 }
 
 #submit:hover {

@@ -9,6 +9,11 @@ body {
   font-weight: 100;
   font-style: normal;
   letter-spacing: 1.5px;
+  background-image: url("../../public/bg.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: rgb(216, 216, 216);
 }
 
 #header {
@@ -17,5 +22,6 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
-  background-color: rgba(92, 92, 92, 0.25);
+  background-color: rgba(92, 92, 92, 0.85);
+  color: rgb(216, 216, 216);
 }
