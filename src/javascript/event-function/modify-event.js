@@ -35,7 +35,9 @@ export function modifyEvent(id) {
       .then(async (response) => {
         console.log(response);
         if (!response.ok) {
+          /** @const {JSON} error - Waiting asyncronous event for receive the json response */
           const error = await response.json();
+          /** @description - Create a new error */
           throw new Error(`SCRIPT_ERROR: ${error}`);
         }
         return response.json();
