@@ -21,7 +21,7 @@ addDate.addEventListener("click", (e) => {
   );
 });
 /**
- * Select the button to validate the form 
+ * Select the button to validate the form
  */
 const formBtn = document.getElementById("submit");
 

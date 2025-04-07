@@ -1,4 +1,6 @@
 import { displayError } from "./display-error.js";
+import { postNewEvent } from "./post-new-event.js";
+import { getInputValue } from "./get-input-value.js";
 
 /**
  * Create An error if the inputs are not available or create an event if all the inputs are good
@@ -30,7 +32,6 @@ export function errorOrCreateEvent() {
     }
   } else {
     const el = document.querySelector(`.${author.id}-p`);
-    console.log(el);
     if (el) el.remove();
   }
 
@@ -43,7 +44,6 @@ export function errorOrCreateEvent() {
     }
   } else {
     const el = document.querySelector(`.${desc.id}-p`);
-    console.log(el);
     if (el) el.remove();
   }
   if (

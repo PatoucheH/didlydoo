@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="../CSS/styles.css" />
     <link rel="stylesheet" href="../CSS/styles/style-form.css" />
     <!-- Load google font Orbitron-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Load js script after when html full readed -->
     <script defer type="module" src="../javascript/form.js"></script>
     <title>Add an event</title>
@@ -21,17 +24,21 @@
     <main>
       <form action="./event.html" method="POST" id="my-form">
         <label for="name-event">Enter the name of the event : </label>
-        <input type="text" id="name-event" required />
+        <input type="text" id="name-event" required maxlength="255" />
 
         <label for="author-event">Enter your name : </label>
-        <input type="text" id="author-event" required />
+        <input type="text" id="author-event" required maxlength="255" />
 
         <label for="desc-event">Enter the description of your event : </label>
-        <input type="text" id="desc-event" required />
+        <input type="text" id="desc-event" required maxlength="255" />
 
         <label for="date-event">Enter the date : </label>
         <input type="date" id="date-event" class="date" required />
-        <img src="../../public/plus-symbole-noir.png" alt="add a date" id="add-date"/>
+        <img
+          src="../../public/plus-symbole-noir.png"
+          alt="add a date"
+          id="add-date"
+        />
         <button type="submit" id="submit">Add new event</button>
       </form>
     </main>
