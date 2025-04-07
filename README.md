@@ -1,22 +1,27 @@
 # Didlydoo | Group project for becode
 
 ## Feature
+
 - Web app for create an event
 - The users can be vote for the future dates of they are ok or no for assist at the event
 - Possibilities to Add, Update, Delete, Add dates, create an attendance & vote for a dates
 
 ## Tech
+
 - We using HTML and CSS for the frontend
 - Javascript, Vite Environment for backend
 - This page have responsive design
 
 ## Description
+
 - Simple web app for create event and users add they attendances disponibilities
 
 ## Presents
+
 ![Presents ou projects](public/present.png)
 
 ## Structure
+
 ```
 https://github.com/PatoucheH/didlydoo/
     ├─► README.md
@@ -63,7 +68,9 @@ https://github.com/PatoucheH/didlydoo/
             |
             ├─► form-function/
             |       ├─► get-input-value.js
-            |       └─► post-new-event.js
+            |       ├─► post-new-event.js
+            |       ├─► create-event-or-display-error.js
+            |       └─► display-error.js
             |
             ├─► general-utils/
             |       ├─► add-dates.js
@@ -78,6 +85,6 @@ https://github.com/PatoucheH/didlydoo/
 ```
 
 # Credit
+
 - **Please! Do not modify this repository.**
 - Created by Valentin Hugo & Stephan
-
