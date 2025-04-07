@@ -1,19 +1,15 @@
+/** @description - Import the fucntions we needed for start event module */
 import { displayEventById } from "./event-function/display-one-event.js";
 import { createHeader } from "./general-utils/header.js";
-/**
- * Create the header of the page 
- */
+
+/** @description - Call createHeader function */
 createHeader();
 
-
-/**
- * Get the id of the event to display from the local storage
- */
+/** @var {json} id - get Event in backend local storage */
 let id = localStorage.getItem("event");
 
-/**
- * When the DOM is loaded display the event select by the id
- */
+/** @description - Add an event listener on the window who has call after the scripts is loaded*/
 window.addEventListener("DOMContentLoaded", (e) => {
+  /** @description - Call displayEventById function with id like params */
   displayEventById(id);
 });
